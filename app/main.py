@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text, select
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import NullPool
 from pydantic import BaseModel
-from pydantic import datetime
+from datetime import datetime
 import os
 import logging
 
