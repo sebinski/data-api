@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text, select
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import NullPool
 from pydantic import BaseModel
+from pydantic import datetime
 import os
 import logging
 
@@ -35,7 +36,7 @@ class ItemRead(BaseModel):
     id: int
     name: str
     description: str | None
-    created_at: str
+    created_at: datetime
 
     class Config:
         orm_mode = True
